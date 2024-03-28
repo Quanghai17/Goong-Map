@@ -36,3 +36,84 @@
     transform: rotate(360deg);
   }
 }
+
+.marker.error {
+  animation: pulse 1s infinite alternate; /* Áp dụng animation cho Marker có status là 'ERROR' */
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.marker {
+  cursor: pointer;
+}
+
+.error {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.circle {
+  position: absolute;
+  background-color: rgba(238, 78, 78, 0.7);
+  border-radius: 100%;
+  border: 2px solid transparent;
+  transition: all .5s;
+  transform-origin: 50% 50%;
+}
+
+@keyframes phonering-alo-circle-fill-anim {
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.marker-list {
+  position: fixed;
+  top: 200px; 
+  right: 100px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  max-height: calc(100vh - 20px); 
+  overflow-y: auto;
+}
+
+.note-list {
+  position: fixed;
+  top: 5px; 
+  right: 100px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  max-height: calc(100vh - 20px); 
+  overflow-y: auto;
+}
